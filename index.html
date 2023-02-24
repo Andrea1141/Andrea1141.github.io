@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer.Me</title>
+    <link rel="stylesheet" href="choice.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <a href="help.html">
+    <div class="slideshow-container" id="container1" data-cycle="10000">
+      <h1>VOGLIO <br> AIUTARE</h1>
+  
+      <div class="mySlides fade">
+          <img src="images/red_cross.jpg">
+      </div>
+  
+      <div class="mySlides fade">
+          <img src="images/food_volunteers.jpg">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/volunteers.jpg">
+    </div>
+    </div>
+  </a>
+
+  <a href="helpme.html">
+    <div class="slideshow-container" id="container2" data-cycle="10000">
+      <h1>HO BISOGNO <br> DI AIUTO</h1>
+  
+      <div class="mySlides fade">
+          <img src="images/food.jpg">
+      </div>
+  
+      <div class="mySlides fade">
+          <img src="images/red_cross.jpg">
+      </div>
+    </div>
+  </a>
+
+</body>
+
+<script>
+
+var slideshowContainers = document.getElementsByClassName("slideshow-container");
+for(let s = 0; s < slideshowContainers.length; s++) { 
+    var cycle = slideshowContainers[s].dataset.cycle;
+    var slides = slideshowContainers[s].querySelectorAll('.mySlides');
+    var slideIndex = 0;
+    showSlides(slides, slideIndex, cycle);
+};
+
+
+function showSlides(slides, slideIndex, cycle) {
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    };
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    };
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(function() {
+        showSlides(slides, slideIndex, cycle)
+    }, cycle);
+};
+
+</script>
+</html>
