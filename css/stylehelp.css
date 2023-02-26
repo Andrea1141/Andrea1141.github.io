@@ -9685,21 +9685,37 @@ textarea {
   top: 0;
   left: 0; }
 
-@media screen and (min-width: 990px) and (max-width: 1400px){
-  .card-flip,
-  .front,
-  .back {
-    font-size: 12px;
+  @media screen and (min-width: 990px) and (max-width: 1400px){
+    .card-flip,
+    .front,
+    .back {
+      font-size: 12px;
+    }
   }
-}
-
-@media screen and (max-width: 990px){
-  .card-flip,
-  .front,
-  .back {
-    font-size: 20px;
+  
+  @media screen and (min-width: 500px) and (max-width: 990px){
+    .card-flip,
+    .front,
+    .back {
+      font-size: 20px;
+    }
   }
-}
+  
+  @media screen and (min-width: 350px) and (max-width: 500px){
+    .card-flip,
+    .front,
+    .back {
+      font-size: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 350px){
+    .card-flip,
+    .front,
+    .back {
+      font-size: 14px;
+    }
+  }
 
 .front {
   z-index: 2;
