@@ -9458,7 +9458,9 @@ textarea {
   position: relative;
   display: block;
   cursor: pointer;
-  overflow: hidden; }
+  overflow: hidden; 
+  height: 100%;
+}
   .instagram-item img {
     position: relative;
     z-index: -1;
@@ -9467,7 +9469,9 @@ textarea {
     transform: scale(1);
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
-    transition: .3s all ease; }
+    transition: .3s all ease;
+    height: 100%;
+   }
   .instagram-item:before {
     content: "";
     position: absolute;
@@ -9643,7 +9647,27 @@ textarea {
 .back {
   width: 100%;
   height: 150px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 990px) and (max-width: 1400px){
+  .card-flip,
+  .front,
+  .back {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 990px){
+  .card-flip,
+  .front,
+  .back {
+    font-size: 20px;
+  }
+}
+
 
 .flip {
   -webkit-transition: 0.6s;
@@ -9812,7 +9836,7 @@ blockquote {
 
 .counter {
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #fff;
   margin-bottom: 30px;
   -webkit-box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
@@ -9980,4 +10004,9 @@ blockquote {
       #list .heading {
         font-size: 75px;
         margin-bottom: 25px;
+      }
+
+      #find-help {
+        padding: 26px 60px;
+        font-size: 24px;
       }
